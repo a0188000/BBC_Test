@@ -29,16 +29,17 @@ class MainViewController: UIViewController {
         view.backgroundColor = .white
         
         searchController = UISearchController(searchResultsController: nil)
-        searchController.obscuresBackgroundDuringPresentation = true
+        searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
-//        definesPresentationContext = true
+        definesPresentationContext = true
         self.setUI()
         self.initBinding()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.controller.searchMusic(musicName: "jason mars")
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//            self.controller.searchMusic(musicName: "jason mars")
+//        }
     }
 
     private func setUI() {
@@ -76,6 +77,11 @@ class MainViewController: UIViewController {
         self.controller.viewModel.$listViewModels { [weak self] _ in
             self?.collectionView?.reloadData()
         }
+        
+        self.controller.viewModel.$error { [weak self] (error) in
+            guard let `self` = self, let error = error else{ return }
+            self.showAlert("錯誤", message: error.localizedDescription)
+        }
     }
     
     @objc private func searchMusic() {
@@ -84,11 +90,21 @@ class MainViewController: UIViewController {
     }
 }
 
+extension MainViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchMusicName = searchBar.text
+        self.searchMusic()
+        self.view.endEditing(true)
+    }
+}
+
 extension MainViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
+        /*
         self.timer?.invalidate()
         self.searchMusicName = searchController.searchBar.text
         self.timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.searchMusic), userInfo: nil, repeats: false)
+         */
     }
 }
 
@@ -114,30 +130,3 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
         2.0
     }
 }
-
-class MusicListController {
-    
-    var viewModel: MusicListViewModel
-    
-    init(viewModel: MusicListViewModel = MusicListViewModel()) {
-        self.viewModel = viewModel
-    }
-    
-    func start() {
-        self.viewModel.isLoading = true
-    }
-    
-    func searchMusic(musicName: String) {
-        self.viewModel.isLoading = true
-        APIManager.shared.request(req: ItunesEndPoint.searchMusic(musiceName: musicName)) { (result: Result<Itunes, Error>) in
-            self.viewModel.isLoading = false
-            switch result {
-            case .success(let itunes):
-                self.viewModel.listViewModels = itunes.musics
-            case .failure(let error):
-                print("Search failed: \(error.localizedDescription)")
-            }
-        }
-    }
-}
-

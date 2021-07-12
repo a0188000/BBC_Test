@@ -19,10 +19,15 @@
 		360566AD2698187D00E17D39 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360566AC2698187D00E17D39 /* APIManager.swift */; };
 		360566B7269820A600E17D39 /* Declarative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360566B6269820A600E17D39 /* Declarative.swift */; };
 		360566C82698239800E17D39 /* UICollectionView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360566C72698239800E17D39 /* UICollectionView + Extension.swift */; };
+		36B07F5C269BD35F00F2FB66 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B07F5B269BD35F00F2FB66 /* UIViewController + Extension.swift */; };
 		36CAC4672698371D00919123 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAC4662698371D00919123 /* MusicCell.swift */; };
 		36CAC4712699C50000919123 /* ItunesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAC4702699C50000919123 /* ItunesEndPoint.swift */; };
 		36CAC47F2699C63700919123 /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAC47E2699C63700919123 /* Configurations.swift */; };
 		36CAC4962699CA5600919123 /* MusicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAC4952699CA5600919123 /* MusicListViewModel.swift */; };
+		36CAC4C4269ACCB300919123 /* ItunesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAC4C3269ACCB300919123 /* ItunesService.swift */; };
+		36CAC4CC269ACD4C00919123 /* MusicListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAC4CB269ACD4C00919123 /* MusicListController.swift */; };
+		36CAC4E1269BCAE400919123 /* MusicListControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAC4E0269BCAE400919123 /* MusicListControllerSpec.swift */; };
+		36CAC4E6269BCC4C00919123 /* MockItunesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAC4E5269BCC4C00919123 /* MockItunesService.swift */; };
 		4E8B067EA967E1A2D3C4AEC6 /* Pods_EBC_Test_EBC_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF4868AD100B0A6B5689651 /* Pods_EBC_Test_EBC_TestUITests.framework */; };
 		865FFAA94A71397726CB4863 /* Pods_EBC_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB70BD6CE0CE7CEB2EA5AE3A /* Pods_EBC_TestTests.framework */; };
 /* End PBXBuildFile section */
@@ -62,10 +67,15 @@
 		360566AC2698187D00E17D39 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		360566B6269820A600E17D39 /* Declarative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Declarative.swift; sourceTree = "<group>"; };
 		360566C72698239800E17D39 /* UICollectionView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView + Extension.swift"; sourceTree = "<group>"; };
+		36B07F5B269BD35F00F2FB66 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		36CAC4662698371D00919123 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 		36CAC4702699C50000919123 /* ItunesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesEndPoint.swift; sourceTree = "<group>"; };
 		36CAC47E2699C63700919123 /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
 		36CAC4952699CA5600919123 /* MusicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewModel.swift; sourceTree = "<group>"; };
+		36CAC4C3269ACCB300919123 /* ItunesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesService.swift; sourceTree = "<group>"; };
+		36CAC4CB269ACD4C00919123 /* MusicListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListController.swift; sourceTree = "<group>"; };
+		36CAC4E0269BCAE400919123 /* MusicListControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListControllerSpec.swift; sourceTree = "<group>"; };
+		36CAC4E5269BCC4C00919123 /* MockItunesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockItunesService.swift; sourceTree = "<group>"; };
 		6F8903039573D3EC7D40E04D /* Pods_EBC_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EBC_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9037BD2D8B619AE9115E232D /* Pods-EBC_TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EBC_TestTests.debug.xcconfig"; path = "Target Support Files/Pods-EBC_TestTests/Pods-EBC_TestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9154634878F249A2489333F7 /* Pods-EBC_Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EBC_Test.debug.xcconfig"; path = "Target Support Files/Pods-EBC_Test/Pods-EBC_Test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,8 +156,10 @@
 				36CAC4652698370100919123 /* Views */,
 				36CAC4B02699CFC100919123 /* ViewControllers */,
 				36CAC46F2699C31A00919123 /* ViewModel */,
+				36CAC4C2269ACC9C00919123 /* Service */,
 				360566C62698238600E17D39 /* Extensions */,
 				36CAC46E2699C30700919123 /* PropertyWrapper */,
+				360566B6269820A600E17D39 /* Declarative.swift */,
 				36CAC47E2699C63700919123 /* Configurations.swift */,
 				3605665F2697EDF700E17D39 /* Assets.xcassets */,
 				360566612697EDF700E17D39 /* LaunchScreen.storyboard */,
@@ -160,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				3605666D2697EDF700E17D39 /* EBC_TestTests.swift */,
+				36CAC4E5269BCC4C00919123 /* MockItunesService.swift */,
+				36CAC4E0269BCAE400919123 /* MusicListControllerSpec.swift */,
 				3605666F2697EDF700E17D39 /* Info.plist */,
 			);
 			path = EBC_TestTests;
@@ -177,7 +191,6 @@
 		360566A22698156900E17D39 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				360566B6269820A600E17D39 /* Declarative.swift */,
 				36CAC4702699C50000919123 /* ItunesEndPoint.swift */,
 				360566A32698158300E17D39 /* MusicItunes.swift */,
 			);
@@ -195,6 +208,7 @@
 		360566C62698238600E17D39 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				36B07F5B269BD35F00F2FB66 /* UIViewController + Extension.swift */,
 				360566C72698239800E17D39 /* UICollectionView + Extension.swift */,
 			);
 			path = Extensions;
@@ -219,6 +233,7 @@
 		36CAC46F2699C31A00919123 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				36CAC4CB269ACD4C00919123 /* MusicListController.swift */,
 				36CAC4952699CA5600919123 /* MusicListViewModel.swift */,
 			);
 			path = ViewModel;
@@ -230,6 +245,14 @@
 				3605665A2697EDF100E17D39 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		36CAC4C2269ACC9C00919123 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				36CAC4C3269ACCB300919123 /* ItunesService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		DA4FB08AF2A94B611DAFE7C0 /* Pods */ = {
@@ -485,11 +508,14 @@
 				36CAC4712699C50000919123 /* ItunesEndPoint.swift in Sources */,
 				3605665B2697EDF100E17D39 /* MainViewController.swift in Sources */,
 				360566C82698239800E17D39 /* UICollectionView + Extension.swift in Sources */,
+				36CAC4C4269ACCB300919123 /* ItunesService.swift in Sources */,
 				360566A42698158300E17D39 /* MusicItunes.swift in Sources */,
 				36CAC4672698371D00919123 /* MusicCell.swift in Sources */,
 				360566B7269820A600E17D39 /* Declarative.swift in Sources */,
+				36CAC4CC269ACD4C00919123 /* MusicListController.swift in Sources */,
 				36CAC47F2699C63700919123 /* Configurations.swift in Sources */,
 				36CAC4962699CA5600919123 /* MusicListViewModel.swift in Sources */,
+				36B07F5C269BD35F00F2FB66 /* UIViewController + Extension.swift in Sources */,
 				360566982698031C00E17D39 /* Observable.swift in Sources */,
 				360566572697EDF100E17D39 /* AppDelegate.swift in Sources */,
 				360566AD2698187D00E17D39 /* APIManager.swift in Sources */,
@@ -500,7 +526,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36CAC4E1269BCAE400919123 /* MusicListControllerSpec.swift in Sources */,
 				3605666E2697EDF700E17D39 /* EBC_TestTests.swift in Sources */,
+				36CAC4E6269BCC4C00919123 /* MockItunesService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,19 +36,20 @@ class MusicCell: UICollectionViewCell {
     
     private func setConstrints() {
         self.coverImageView.snp.makeConstraints {
-            $0.left.right.equalToSuperview()
-            $0.top.equalTo(4)
-            $0.height.equalTo(100)
+            $0.left.top.equalTo(10)
+            $0.height.width.equalTo(100)
         }
         
         self.longDescription.snp.makeConstraints {
-            $0.left.equalTo(8)
+            $0.left.equalTo(coverImageView.snp.right).offset(8)
             $0.right.equalTo(-8)
-            $0.top.equalTo(coverImageView.snp.bottom).offset(8)
+            $0.top.equalTo(coverImageView)
             $0.bottom.equalTo(-8)
         }
         
         self.spaceLineView.snp.makeConstraints {
+            $0.top.greaterThanOrEqualTo(coverImageView.snp.bottom).offset(10)
+            $0.top.greaterThanOrEqualTo(longDescription.snp.bottom).offset(10).priority(751)
             $0.left.right.bottom.equalToSuperview()
             $0.height.equalTo(0.5)
         }
@@ -64,8 +65,8 @@ class MusicCell: UICollectionViewCell {
     }
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        longDescription.preferredMaxLayoutWidth = layoutAttributes.size.width - contentView.layoutMargins.left - contentView.layoutMargins.left
-        layoutAttributes.bounds.size.height = systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+        let targetSize = CGSize(width: layoutAttributes.frame.width, height: 0)
+        layoutAttributes.frame.size = contentView.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel)
         return layoutAttributes
     }
     

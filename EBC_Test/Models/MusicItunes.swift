@@ -19,5 +19,7 @@ struct Itunes: Codable {
 
 struct Music: Codable {
     var artworkUrl100: String
+    var trackName: String?
+    var artistName: String?
     var longDescription: String?
 }

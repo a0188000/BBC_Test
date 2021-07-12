@@ -8,8 +8,13 @@
 import Foundation
 
 class MusicListViewModel {
+    
     @Observable(queue: .main)
     var isLoading = false
+    
     @Observable(queue: .main)
     var listViewModels = [Music]()
+    
+    @Observable(queue: .main)
+    var error: Error? = nil
 }
