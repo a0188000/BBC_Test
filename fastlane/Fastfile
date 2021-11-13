@@ -1,0 +1,59 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+module Config
+	Target = "EBC_Test"
+end
+
+default_platform(:ios)
+
+platform :ios do
+  before_all do |lane|
+    unless File.zero?("../.xcode-version")
+      # xcversion(version: File.read("../.xcode-version"))
+    end
+  end
+
+  desc "build to firebase"
+  lane :beta do |optoins|
+    # echo("Branch Name: ${branch}")
+    build_to_firebase
+  end
+
+  desc "build to testFlight"
+  lane :beta_testFlight do |optoins|
+    # echo("Branch Name: ${branch}")
+    buidl_beta_to_testFlight
+  end
+
+  desc "build release"
+  lane :release do |optoins|
+    # echo("Branch Name: ${branch}")
+    build_release
+  end
+
+  def build_to_firebase ()
+    puts "出版到firebase"
+  end
+
+  def buidl_beta_to_testFlight()
+    puts "出版到testFlight"
+  end
+
+  def build_release()
+    build_to_firebase
+    buidl_beta_to_testFlight
+  end
+end
