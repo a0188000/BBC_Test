@@ -29,13 +29,13 @@ platform :ios do
   desc "build to firebase"
   lane :beta do |optoins|
     # echo("Branch Name: ${branch}")
-    build_to_firebase
+    build_beta_to_firebase
   end
 
   desc "build to testFlight"
   lane :beta_testFlight do |optoins|
     # echo("Branch Name: ${branch}")
-    buidl_beta_to_testFlight
+    build_beta_to_testFlight
   end
 
   desc "build release"
@@ -44,16 +44,20 @@ platform :ios do
     build_release
   end
 
-  def build_to_firebase ()
-    puts "出版到firebase"
+  def build_beta_to_firebase ()
+    puts "出測試版到firebase"
   end
 
-  def buidl_beta_to_testFlight()
-    puts "出版到testFlight"
+  def build_beta_to_testFlight()
+    puts "出測試版到testFlight"
+  end
+
+  def build_release_to_testFlight()
+    puts "出正式版到testFlight"
   end
 
   def build_release()
-    build_to_firebase
-    buidl_beta_to_testFlight
+    build_beta_to_firebase
+    build_release_to_testFlight
   end
 end
