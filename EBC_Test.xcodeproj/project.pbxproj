@@ -30,6 +30,7 @@
 		36CAC4E6269BCC4C00919123 /* MockItunesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAC4E5269BCC4C00919123 /* MockItunesService.swift */; };
 		4E8B067EA967E1A2D3C4AEC6 /* Pods_EBC_Test_EBC_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF4868AD100B0A6B5689651 /* Pods_EBC_Test_EBC_TestUITests.framework */; };
 		865FFAA94A71397726CB4863 /* Pods_EBC_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB70BD6CE0CE7CEB2EA5AE3A /* Pods_EBC_TestTests.framework */; };
+		C69E5E5E275769F200C20FC0 /* fastfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E5E5D275769F200C20FC0 /* fastfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		9037BD2D8B619AE9115E232D /* Pods-EBC_TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EBC_TestTests.debug.xcconfig"; path = "Target Support Files/Pods-EBC_TestTests/Pods-EBC_TestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9154634878F249A2489333F7 /* Pods-EBC_Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EBC_Test.debug.xcconfig"; path = "Target Support Files/Pods-EBC_Test/Pods-EBC_Test.debug.xcconfig"; sourceTree = "<group>"; };
 		BFF4868AD100B0A6B5689651 /* Pods_EBC_Test_EBC_TestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EBC_Test_EBC_TestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C69E5E5D275769F200C20FC0 /* fastfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fastfile.swift; sourceTree = "<group>"; };
 		CE5BC025A619F599805FD12D /* Pods-EBC_Test-EBC_TestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EBC_Test-EBC_TestUITests.debug.xcconfig"; path = "Target Support Files/Pods-EBC_Test-EBC_TestUITests/Pods-EBC_Test-EBC_TestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB70BD6CE0CE7CEB2EA5AE3A /* Pods_EBC_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EBC_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF1C20754D1BBD0D4AAB69E /* Pods-EBC_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EBC_Test.release.xcconfig"; path = "Target Support Files/Pods-EBC_Test/Pods-EBC_Test.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				36CAC46E2699C30700919123 /* PropertyWrapper */,
 				360566B6269820A600E17D39 /* Declarative.swift */,
 				36CAC47E2699C63700919123 /* Configurations.swift */,
+				C69E5E5D275769F200C20FC0 /* fastfile.swift */,
 				3605665F2697EDF700E17D39 /* Assets.xcassets */,
 				360566612697EDF700E17D39 /* LaunchScreen.storyboard */,
 				360566642697EDF700E17D39 /* Info.plist */,
@@ -517,6 +520,7 @@
 				36CAC4962699CA5600919123 /* MusicListViewModel.swift in Sources */,
 				36B07F5C269BD35F00F2FB66 /* UIViewController + Extension.swift in Sources */,
 				360566982698031C00E17D39 /* Observable.swift in Sources */,
+				C69E5E5E275769F200C20FC0 /* fastfile.swift in Sources */,
 				360566572697EDF100E17D39 /* AppDelegate.swift in Sources */,
 				360566AD2698187D00E17D39 /* APIManager.swift in Sources */,
 			);
